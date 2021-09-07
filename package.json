@@ -1,0 +1,21 @@
+{
+  "name": "react-stylefree-components",
+  "version": "0.1.0",
+  "description": "A collection of compound React components for handling common UX paradigms, but without containing opinionated styling. Bring your own styles to get started!",
+  "main": "index.js",
+  "repository": "git@github.com:benduran/react-stylefree-components.git",
+  "author": "Benjamin Duran <stratodyne@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "eslint-config-react-yas": "^1.3.0",
+    "husky": "^7.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "simplestyle-js": "^3.1.3",
+    "typescript": "^4.4.2"
+  }
+}
