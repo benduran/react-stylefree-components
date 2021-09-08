@@ -4,6 +4,8 @@ export interface ChatUser {
   id: string;
   name: string;
   username: string;
+
+  avatarUrl?: string;
 }
 
 /**
@@ -26,6 +28,9 @@ export interface ChatThreadMessage extends ChatMessage {
 }
 
 export interface CustomChatComponents {
+  ChatList: ComponentType;
+  ChatMessage: ComponentType;
+  Loader: ComponentType;
   MessageText: ComponentType;
   Textbox: ComponentType;
 }

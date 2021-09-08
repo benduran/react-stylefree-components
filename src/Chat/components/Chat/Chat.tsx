@@ -1,10 +1,16 @@
 import React from 'react';
 
-import { TestIds } from '../../constants';
+import { CustomComponentsProvider } from '../../context';
 import { useConvertMessagesToThreads } from '../../hooks';
 import { ChatComponentProps } from '../../types';
+import { ChatList } from './ChatList';
 
-export const Chat = ({ messages }: ChatComponentProps) => {
+export const Chat = ({ components, messages }: ChatComponentProps) => {
+  const { ChatList: CustomChatList } = components ?? {};
   const threads = useConvertMessagesToThreads(messages);
-  return <ul data-testid={TestIds.ChatList} />;
+  return (
+    <CustomComponentsProvider {...components}>
+      {CustomChatList ? <CustomChatList /> : <ChatList threads={threads} />}
+    </CustomComponentsProvider>
+  );
 };
