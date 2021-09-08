@@ -2,12 +2,12 @@ import React, { createContext, useContext, useMemo } from 'react';
 
 import { CustomChatComponents } from '../types';
 
-const customComponentsCtx = createContext<Partial<CustomChatComponents> | null>(null);
+const customComponentsCtx = createContext<CustomChatComponents | null>(null);
 
 export const CustomComponentsProvider = ({
   children,
   ...components
-}: Partial<CustomChatComponents> & { children: React.ReactNode | React.ReactNode }) => (
+}: CustomChatComponents & { children: React.ReactNode | React.ReactNode }) => (
   <customComponentsCtx.Provider value={components}>{children}</customComponentsCtx.Provider>
 );
 

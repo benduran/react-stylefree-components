@@ -27,13 +27,20 @@ export interface ChatThreadMessage extends ChatMessage {
   threads: ChatThreadMessage[];
 }
 
-export interface CustomChatComponents {
+export type ComponentClasses = Partial<{
+  chatList: string;
+  chatMessage: string;
+  loader: string;
+  userAvatar: string;
+}>;
+
+export type CustomChatComponents = Partial<{
   ChatList: ComponentType;
   ChatMessage: ComponentType;
   Loader: ComponentType;
   MessageText: ComponentType;
   Textbox: ComponentType;
-}
+}>;
 
 /**
  * Props for the Chat Component
