@@ -11,7 +11,7 @@ export const ClassesProvider = ({
   <classesContext.Provider value={components}>{children}</classesContext.Provider>
 );
 
-export function useCustomComponents() {
+export function useCustomClasses() {
   const ctx = useContext(classesContext);
   if (!ctx) {
     throw new Error('Unable to use classes context. Is there a <ClassesProvider /> in the render tree?');
